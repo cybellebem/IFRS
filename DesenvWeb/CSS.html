@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Resumo completo sobre CSS3, seletores, pseudo-classes, box model e mais.">
+    <meta name="keywords" content="CSS3, Seletores, Box Model, Display, Cores, Flexbox">
+    <meta name="author" content="Seu Nome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo sobre CSS3</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        border: 2px solid black;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .box {
+        background-color: lightblue;
+        border: 2px solid blue;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    /* BLOCK */
+    .block {
+        display: block;
+        width: 200px;
+        height: 50px;
+    }
+
+    /* INLINE */
+    .inline {
+        display: inline;
+        width: 200px;   /* NÃO FUNCIONA em inline */
+        height: 50px;   /* NÃO FUNCIONA em inline */
+        background-color: lightcoral;
+    }
+
+    /* INLINE-BLOCK */
+    .inline-block {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        background-color: lightgreen;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Resumo Completo sobre CSS3</h1>
+</header>
+
+<main>
+
+<section>
+    <h2>CSS3</h2>
+    <p><strong>Cascading Style Sheets</strong></p>
+    <p>Criado para separar o conteúdo da apresentação visual em documentos HTML e XML.</p>
+</section>
+
+<section>
+    <h2>Especificidade</h2>
+    <ol start="0">
+        <li>!important</li>
+        <li>Estilos inline: diretamente no elemento (ex: <code>style="color:red;"</code>)</li>
+        <li>IDs (ex: <code>#identificador</code>)</li>
+        <li>Classes (.classe), Pseudo-classes (:hover), atributos (type="text")</li>
+        <li>Elementos (div,p) </li>
+        <li>Universal (*) </li>
+        <li>Herança: não tem Especificidade própria</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Tipos de Declaração CSS</h2>
+    <ul>
+        <li><strong>Inline:</strong> <code>&lt;p style="color:red"&gt;</code></li>
+        <li><strong>Interno:</strong> <code>&lt;style&gt;&lt;/style&gt;</code></li>
+        <li><strong>Externo:</strong> <code>&lt;link rel="stylesheet" href="mobile.css" media="(max-width: 600px)"&gt;</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Seletores</h2>
+
+    <h3>Básicos</h3>
+    <ul>
+        <li><code>#id</code></li>
+        <li><code>.classe</code></li>
+        <li><code>elemento</code></li>
+        <li><code>*</code> (universal)</li>
+    </ul>
+
+    <h3>Combinados</h3>
+    <ul>
+        <li><code>A, B</code> → h1, p { }</li>
+        <li><code>A B</code> → div p { }</li>
+        <li><code>A &gt; B</code> → div &gt; p { }</li>
+        <li><code>A + B</code> → h1 + p { }</li>
+        <li><code>A ~ B</code> → h1 ~ p { }</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Pseudo-classes (:)</h2>
+    <ul>
+        <li><code>:hover</code></li>
+        <li><code>:focus</code></li>
+        <li><code>:active</code></li>
+        <li><code>:nth-child(n)</code></li>
+        <li><code>:first-child</code></li>
+        <li><code>:last-child</code></li>
+        <li><code>:not(selector)</code></li>
+        <li><code>:checked</code></li>
+        <li><code>:disabled</code> / <code>:enabled</code></li>
+        <li><code>:visited</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Pseudo-elementos (::)</h2>
+    <ul>
+        <li><code>::before</code> / <code>::after</code></li>
+        <li><code>::first-line</code></li>
+        <li><code>::first-letter</code></li>
+        <li><code>::selection</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Seletores por Atributo</h2>
+    <ul>
+        <li><code>[attr]</code></li>
+        <li><code>[attr=value]</code></li>
+        <li><code>[attr~=value]</code></li>
+        <li><code>[attr^=value]</code></li>
+        <li><code>[attr$=value]</code></li>
+        <li><code>[attr*=value]</code></li>
+    </ul>
+
+    <h3>Modificadores</h3>
+    <ul>
+        <li><code>[attr=value i]</code> → ignora maiúsculas/minúsculas</li>
+        <li><code>[attr=value s]</code> → sensível a maiúsculas/minúsculas</li>
+    </ul>
+</section>
+
+<section>
+    <h2>At-rules (@)</h2>
+    <ul>
+        <li><code>@import</code></li>
+        <li><code>@media</code></li>
+        <li><code>@font-face</code></li>
+        <li><code>@keyframes</code></li>
+        <li><code>@supports</code></li>
+        <li><code>@page</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Display</h2>
+    <ul>
+        <li><strong>block</strong> → ocupa toda largura e quebra linha</li>
+        <li><strong>inline</strong> → ocupa apenas o conteúdo</li>
+        <li>
+            <strong>inline-block</strong>
+        </li>
+        <div class="container">
+    <h2>Display: block</h2>
+    <div class="box block">Block 1</div>
+    <div class="box block">Block 2</div>
+    <div class="box block">Block 3</div>
+    <p>
+        ✔ Quebra linha automaticamente <br>
+        ✔ Ocupa toda largura disponível <br>
+        ✔ Aceita width e height
+    </p>
+</div>
+
+<!-- INLINE -->
+<div class="container">
+    <h2>Display: inline</h2>
+    <span class="box inline">Inline 1</span>
+    <span class="box inline">Inline 2</span>
+    <span class="box inline">Inline 3</span>
+    <p>
+        ✔ Não quebra linha <br>
+        ✖ Não aceita width e height <br>
+        ✔ Ocupa apenas o tamanho do conteúdo
+    </p>
+</div>
+
+<!-- INLINE-BLOCK -->
+<div class="container">
+    <h2>Display: inline-block</h2>
+    <div class="box inline-block">Inline-Block 1</div>
+    <div class="box inline-block">Inline-Block 2</div>
+    <div class="box inline-block">Inline-Block 3</div>
+    <p>
+        ✔ Não quebra linha <br>
+        ✔ Aceita width e height <br>
+        ✔ Permite controlar tamanho mantendo comportamento inline
+    </p>
+</div>
+        <li><strong>flex</strong> → container flexível</li>
+        <li><strong>float</strong> → alinhamento clássico horizontal</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Cores</h2>
+
+    <h3>Formatos</h3>
+    <ul>
+        <li>Hexadecimal → <code>#ff0000</code></li>
+        <li>RGB → <code>rgb(255,0,0)</code></li>
+        <li>RGBA → <code>rgba(255,0,0,0.5)</code></li>
+        <li>HSL → <code>hsl(0,100%,50%)</code></li>
+    </ul>
+
+    <h3>Gradientes</h3>
+    <ul>
+        <li>Linear → <code>linear-gradient(to right, red, yellow)</code></li>
+        <li>Radial → <code>radial-gradient(circle, red, yellow)</code></li>
+    </ul>
+
+    <h3>Cores Básicas</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Hex</th>
+                <th>RGB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Red</td><td>#ff0000</td><td>rgb(255,0,0)</td></tr>
+            <tr><td>Green</td><td>#00ff00</td><td>rgb(0,255,0)</td></tr>
+            <tr><td>Blue</td><td>#0000ff</td><td>rgb(0,0,255)</td></tr>
+            <tr><td>Black</td><td>#000000</td><td>rgb(0,0,0)</td></tr>
+            <tr><td>White</td><td>#ffffff</td><td>rgb(255,255,255)</td></tr>
+            <tr><td>Yellow</td><td>#ffff00</td><td>rgb(255,255,0)</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Box Model</h2>
+    <img src="imgs/Pasted image.png">
+    <p>Define espaço e tamanho dos elementos.</p>
+
+    <h3>box-sizing</h3>
+    <ul>
+        <li><strong>content-box</strong> → padrão</li>
+        <li><strong>border-box</strong> → inclui padding e border</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Reset CSS e Normalize</h2>
+    <ul>
+        <li><strong>Reset CSS:</strong> remove estilos padrões</li>
+        <li><strong>Normalize.css:</strong> mantém estilos úteis e corrige inconsistências</li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 - Página de Resumo CSS3</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumo JavaScript e Tecnologias Web</title>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    section { margin-bottom: 40px; }
+    pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+    th { background: #eee; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Resumo JavaScript e Tecnologias Web</h1>
+</header>
+
+<main>
+
+<section>
+<h2>JavaScript</h2>
+
+<h3>Hoisting</h3>
+<p>Move declarações para o topo do escopo.</p>
+
+<pre>
+// VAR
+console.log(minhaVar); // undefined
+var minhaVar = "Hello";
+
+// LET
+// console.log(minhaLet); // ReferenceError
+let minhaLet = "Hello Let";
+
+// FUNÇÃO
+saudar(); // Olá!
+function saudar() {
+  console.log("Olá!");
+}
+</pre>
+
+<h3>var vs let</h3>
+<ul>
+<li><strong>var</strong> → escopo de função, sofre hoisting</li>
+<li><strong>let</strong> → escopo de bloco, não acessível antes da declaração</li>
+</ul>
+
+<h3>BigInt</h3>
+<pre>
+let numeroGrande = 9007199254740991n;
+</pre>
+
+<h3>Arrays</h3>
+<ul>
+<li>push() → adiciona no final</li>
+<li>pop() → remove último</li>
+<li>unshift() → adiciona no início</li>
+<li>shift() → remove primeiro</li>
+</ul>
+
+<h3>Switch</h3>
+<img src="imgs/image.png">
+<pre>
+switch(valor) {
+  case 1:
+    break;
+  default:
+}
+</pre>
+
+<h3>Underscore em números</h3>
+<pre>
+let numero = 1_000_000;
+</pre>
+
+<h3>React</h3>
+<p>Utiliza Virtual DOM para otimizar atualização da interface.</p>
+
+</section>
+
+<section>
+<h2>XML</h2>
+
+<p><strong>Extensible Markup Language</strong></p>
+<p>Armazenamento e transporte estruturado de dados.</p>
+
+<h3>DTD</h3>
+<pre>
+<!DOCTYPE exemplo SYSTEM "definicao.dtd">
+<!ELEMENT nome (#PCDATA)>
+<!ATTLIST nome id CDATA #REQUIRED>
+</pre>
+
+<ul>
+<li>+ → uma ou mais vezes</li>
+<li>* → zero ou mais</li>
+<li>? → no máximo uma vez</li>
+</ul>
+
+<h3>XSD</h3>
+<p>Tipagem forte: int, string, boolean.</p>
+
+<h3>XQuery</h3>
+<ul>
+<li>Case sensitive</li>
+<li>Extensões: .xq, .xquery, .xqm</li>
+<li>Usa XPath</li>
+<li>FLWOR (For, Let, Where, Order by, Return)</li>
+</ul>
+
+<h3>XHTML</h3>
+<p>Mesmas tags do HTML, porém mais rigoroso.</p>
+
+</section>
+
+<section>
+<h2>Angular</h2>
+
+<ul>
+<li>Framework criado pelo Google</li>
+<li>SPA (Single Page Application)</li>
+<li>Arquitetura baseada em componentes</li>
+<li>Programação reativa</li>
+</ul>
+
+<h3>AngularJS (2010)</h3>
+<ul>
+<li>JavaScript puro</li>
+<li>MVC</li>
+</ul>
+
+<h3>Angular (2016)</h3>
+<ul>
+<li>TypeScript</li>
+<li>Componentes e Serviços</li>
+</ul>
+
+<h3>Arquitetura</h3>
+<ul>
+<li><strong>Componentes</strong></li>
+<li><strong>Módulos</strong></li>
+<li><strong>Serviços</strong></li>
+<li><strong>Injeção de Dependência (DI)</strong></li>
+</ul>
+
+<h3>Router</h3>
+<ul>
+<li>&lt;router-outlet&gt; → área de exibição da rota</li>
+<li>routerLink → navegação</li>
+</ul>
+
+<h3>NodeJS</h3>
+<p>Ambiente backend JavaScript.</p>
+
+</section>
+
+<section>
+<h2>Bootstrap</h2>
+
+<p>Framework front-end responsivo e mobile-first.</p>
+
+<h3>Grid System</h3>
+<ul>
+<li>Baseado em 12 colunas</li>
+<li>.container / .container-fluid</li>
+<li>.row</li>
+<li>.col-*</li>
+</ul>
+
+<h3>Breakpoints</h3>
+<ul>
+<li>col-*</li>
+<li>col-sm-*</li>
+<li>col-md-*</li>
+<li>col-lg-*</li>
+<li>col-xl-*</li>
+</ul>
+
+<h3>Alinhamento</h3>
+<ul>
+<li>text-start</li>
+<li>text-center</li>
+<li>text-end</li>
+</ul>
+
+<h3>Margem e Padding</h3>
+<ul>
+<li>m-*, p-*</li>
+<li>mt, mb, ms, me</li>
+<li>mx, my</li>
+</ul>
+
+<h3>Cores - classes de fundo</h3>
+<img src="imgs/image copy.png">
+
+
+<h3>Botões</h3>
+<ul>
+<li>.btn</li>
+<li>.btn-lg</li>
+<li>.btn-sm</li>
+</ul>
+
+<h3>Alert</h3>
+<p>.alert .alert-*</p>
+
+<h3>Display</h3>
+<ul>
+<li>d-none</li>
+<li>d-block</li>
+<li>d-inline</li>
+<li>d-flex</li>
+</ul>
+
+<h3>Outros</h3>
+<ul>
+<li>.rounded-circle</li>
+<li>Collapse (data-toggle="collapse")</li>
+<li>Navbar</li>
+<li>Spinners</li>
+<li>Tooltips</li>
+</ul>
+
+</section>
+
+<section>
+<h2>REST</h2>
+
+<p><strong>Representational State Transfer</strong></p>
+
+<h3>Métodos HTTP</h3>
+<table>
+<tr><th>Método</th><th>Idempotente</th><th>Seguro</th></tr>
+<tr><td>GET</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>POST</td><td>Não</td><td>Não</td></tr>
+<tr><td>PUT</td><td>Sim</td><td>Não</td></tr>
+<tr><td>DELETE</td><td>Sim</td><td>Não</td></tr>
+</table>
+
+<h3>Status Codes</h3>
+<ul>
+<li>201 Created → correto ao criar recurso</li>
+<li>200 OK → resposta genérica</li>
+<li>204 No Content → sem conteúdo</li>
+<li>202 Accepted → processamento assíncrono</li>
+<li>409 Conflict → conflito</li>
+</ul>
+
+<h3>Princípios REST</h3>
+<ul>
+<li>Interface uniforme</li>
+<li>Stateless</li>
+<li>Cacheável</li>
+<li>Sistema em camadas</li>
+<li>Código sob demanda (opcional)</li>
+</ul>
+
+<h3>OpenAPI (Swagger)</h3>
+<p>Ferramenta para documentar APIs RESTful.</p>
+
+<h3>SOAP</h3>
+<p>Protocolo baseado em XML para serviços web.</p>
+
+<h3>JWT</h3>
+<p>JSON Web Token → padrão para autenticação baseada em token.</p>
+
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 - Resumo Geral Web</p>
+</footer>
+
+</body>
+</html>

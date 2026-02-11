@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Resumo completo sobre HTML, suas estruturas, tags e conceitos relacionados.">
+    <meta name="keywords" content="HTML, Tags, Listas, Tabelas, Formulários, DHTML, Portlets">
+    <meta name="author" content="Seu Nome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo sobre HTML</title>
+</head>
+<body>
+
+<header>
+    <h1>Resumo Completo sobre HTML</h1>
+</header>
+
+<main>
+
+<section>
+    <h2>HTML</h2>
+    <p><strong>HyperText Markup Language</strong></p>
+    <p>Linguagem de marcações/tags para estruturar conteúdos na web.</p>
+    <p>Padronizada inicialmente pela IETF – RFC1866 (HTML 2.0, 1995).</p>
+    <p>Atualmente mantida pelo W3C e WHATWG (HTML5).</p>
+</section>
+
+<section>
+    <h2>Tipos de Tags</h2>
+    <ul>
+        <li>Abertura e Fechamento (compostas): <code>&lt;p&gt;&lt;/p&gt;</code></li>
+        <li>Vazias (self-closing): <code>&lt;img&gt;</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Estrutura Básica de um Documento</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá Mundo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</section>
+
+<section>
+    <h2>Listas</h2>
+    <h3>Ordenadas (&lt;ol&gt;)</h3>
+    <ul>
+        <li>type → 1, A, a, I, i</li>
+        <li>start → número inicial</li>
+        <li>reversed → inverte ordem</li>
+    </ul>
+
+    <h3>Não Ordenadas (&lt;ul&gt;)</h3>
+
+    <h3>Lista de Descrição (&lt;dl&gt;)</h3>
+    <dl>
+        <dt>Título</dt>
+        <dd>Descrição</dd>
+    </dl>
+</section>
+
+<section>
+    <h2>Imagens e Links</h2>
+    <p>Imagem:</p>
+    <code>&lt;img src="caminho.jpg" alt="descrição da imagem"&gt;</code>
+
+    <p>Link:</p>
+    <code>&lt;a href="https://site.com" target="_blank" title="Texto alternativo"&gt;Clique aqui&lt;/a&gt;</code>
+</section>
+
+<section>
+    <h2>Tabelas</h2>
+    <table border="1">
+        <thead>
+            <tr><th>Item</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Maçã</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td>Total</td></tr>
+        </tfoot>
+    </table>
+</section>
+
+<section>
+    <h2>Formulários</h2>
+
+    <h3>Datalist</h3>
+    <input list="opcoes">
+    <datalist id="opcoes">
+        <option value="Opção 1">
+        <option value="Opção 2">
+    </datalist>
+
+    <h3>Fieldset e Legend</h3>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <input type="text" placeholder="Digite seu nome">
+    </fieldset>
+
+    <h3>Button</h3>
+    <button type="submit">Enviar</button>
+
+    <h3>Atributo Pattern</h3>
+    <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+</section>
+
+<section>
+    <h2>Estrutura Semântica</h2>
+    <ul>
+        <li>&lt;header&gt; – Cabeçalho</li>
+        <li>&lt;nav&gt; – Navegação</li>
+        <li>&lt;footer&gt; – Rodapé</li>
+        <li>&lt;article&gt; – Conteúdo independente</li>
+        <li>&lt;section&gt; – Seções</li>
+        <li>&lt;aside&gt; – Conteúdo lateral</li>
+        <li>&lt;main&gt; – Conteúdo principal</li>
+        <li>&lt;div&gt; – Container genérico</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Imagens Avançadas</h2>
+    <figure>
+        <img src="imagem.jpg" alt="Descrição da imagem" width="200">
+        <figcaption>Legenda da imagem</figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Expansão / Detalhes</h2>
+    <details>
+        <summary>Ver mais</summary>
+        <p>Conteúdo oculto.</p>
+    </details>
+</section>
+
+<section>
+    <h2>Tempo / Data</h2>
+    <time datetime="2023-02-15T18:30">15 de fevereiro, 18:30</time>
+</section>
+
+<section>
+    <h2>Iframe</h2>
+    <iframe src="https://youtube.com/embed/video" width="300" height="200"></iframe>
+</section>
+
+<section>
+    <h2>Tags Semânticas de Estilo</h2>
+    <p><b>Negrito</b></p>
+    <p><i>Itálico</i></p>
+    <p><strong>Importante</strong></p>
+    <p><em>Ênfase</em></p>
+    <p><mark>Texto destacado</mark></p>
+    <p><small>Texto menor</small></p>
+</section>
+
+<section>
+    <h2>Símbolos Especiais (Entities)</h2>
+    <ul>
+        <li>&copy; → &copy;</li>
+        <li>&reg; → &reg;</li>
+        <li>&euro; → &euro;</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Portlets</h2>
+    <p>Portlet é um componente web modular.</p>
+    <p>Funciona como um miniaplicativo dentro de um portal.</p>
+    <p>Similar a widgets e cards.</p>
+    <p>Um portal reúne vários portlets, cada um com sua própria lógica, formulários e estilos.</p>
+</section>
+
+<section>
+    <h2>Atributo aria-label</h2>
+    <p>Pertence ao padrão WAI-ARIA.</p>
+    <p>Define um rótulo textual para elementos e ícones.</p>
+    <button aria-label="Fechar">X</button>
+</section>
+
+<section>
+    <h2>DHTML</h2>
+    <p><strong>Dynamic HTML</strong></p>
+    <p>Combinação de HTML, CSS e JavaScript para criar páginas interativas.</p>
+    <ul>
+        <li>Manipulação do DOM</li>
+        <li>Eventos dinâmicos</li>
+        <li>Animações</li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 - Página de Resumo HTML</p>
+</footer>
+
+</body>
+</html>
