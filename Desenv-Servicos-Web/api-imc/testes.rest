@@ -1,0 +1,9 @@
+@base = http://localhost:3000
+### IMC Normal
+GET {{base}}/imc?peso=70&altura=1.75
+### IMC Magreza
+GET {{base}}/imc?peso=50&altura=1.75
+### IMC Sobrepeso
+GET {{base}}/imc?peso=85&altura=1.75
+### IMC Obesidade
+GET {{base}}/imc?peso=110&altura=1.75

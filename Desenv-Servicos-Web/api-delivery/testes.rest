@@ -1,0 +1,7 @@
+@base = http://localhost:3000
+### Até 5 km → 20 minutos
+GET {{base}}/delivery/3
+### Entre 5 e 10 km → 40 minutos
+GET {{base}}/delivery/8
+### Mais de 10 km → 60 minutos
+GET {{base}}/delivery/15
