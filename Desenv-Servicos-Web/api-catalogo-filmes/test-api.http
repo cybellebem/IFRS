@@ -1,0 +1,38 @@
+### 1. Listar todos os filmes
+GET http://localhost:4000/filmes
+Accept: application/json
+
+### 2. Filtrar por gênero (genero: "ficção")
+GET http://localhost:4000/filmes?genero=ficção
+Accept: application/json
+
+### 3. Buscar um filme por ID
+GET http://localhost:4000/filmes/3
+Accept: application/json
+
+### 4. Adicionar um novo filme
+POST http://localhost:4000/filme
+Content-Type: application/json
+
+{
+  "titulo": "Toy Story 2",
+  "descricao": "Woody termina por ser sequestrado por um colecionador de brinquedos",
+  "ano": 1999,
+  "genero": "Animação",
+  "nota": 7.9
+}
+
+### 5. Atualizar um filme existente
+PUT http://localhost:4000/filmes/1
+Content-Type: application/json
+
+{
+  "titulo": "O poderoso chefinho",
+  "descricao": "Um épico sobre uma família mafiosa",
+  "ano": 1972,
+  "genero": "Drama",
+  "nota": 9.2
+}
+
+### 6. Remover um filme pelo ID
+DELETE http://localhost:4000/filmes/4
