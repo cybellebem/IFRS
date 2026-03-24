@@ -1,0 +1,39 @@
+@baseURL = http://localhost:3000/receitas
+
+GET {{baseURL}}
+Content-Type: application/json
+###
+
+
+GET {{baseURL}}/1
+Content-Type: application/json
+###
+
+POST http://localhost:3000/receitas
+Content-Type: application/json
+
+{
+"nome": "a",
+"descricao": "bb",
+"ingredientes": "ovos",
+"modo_preparo": "dificil",
+"tempo_preparo": 20,
+"dificuldade": "bem dificil"
+}
+###
+
+PUT {{baseURL}}/2
+Content-Type: application/json
+
+{
+"nome": "a",
+"descricao": "bb",
+"ingredientes": "ovos",
+"modo_preparo": "dificil",
+"tempo_preparo": 20,
+"dificuldade": "bem dificil"
+}
+###
+
+DELETE {{baseURL}}/2
+Content-Type: application/json

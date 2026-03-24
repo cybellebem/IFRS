@@ -1,0 +1,66 @@
+@baseURL = http://localhost:3000
+### Listar livros (simples)
+GET {{baseURL}}/livros
+Content-Type: application/json
+### Inserir novo livro
+POST http://localhost:3000/livros
+Content-Type: application/json
+{
+"titulo": "Ensaio sobre a Cegueira",
+"autor": "José Saramago",
+"ano_publicacao": 1995,
+"editora_id": 2
+}
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 844
+ETag: W/"34c-do1kPo0OcAeDrLQDnznRysgoeJI"
+Date: Tue, 01 Apr 2025 16:22:49 GMT
+Connection: close
+[
+{
+"id": 1,
+"titulo": "O Pequeno Príncipe",
+"autor": "Antoine de Saint-Exupéry",
+"ano_publicacao": 1943,
+"criado_em": "2025-04-01T14:00:35.000Z",
+"editora_id": 1
+},
+{
+"id": 2,
+"titulo": "Dom Casmurro",
+"autor": "Machado de Assis",
+"ano_publicacao": 1899,
+"criado_em": "2025-04-01T14:00:35.000Z",
+"editora_id": 2
+},
+{
+"id": 3,
+"titulo": "A Revolução dos Bichos",
+"autor": "George Orwell",
+"ano_publicacao": 1945,
+"criado_em": "2025-04-01T14:00:35.000Z",
+"editora_id": 1
+},
+{
+"id": 4,
+"titulo": "Capitães da Areia",
+"autor": "Jorge Amado",
+"ano_publicacao": 1937,
+"criado_em": "2025-04-01T14:00:35.000Z",
+"editora_id": 2
+},
+{
+"id": 5,
+"titulo": "1984",
+"autor": "George Orwell",
+"ano_publicacao": 1949,
+"criado_em": "2025-04-01T14:00:35.000Z",
+"editora_id": 1
+}
+]
+
+### Listar livros com editoras (JOIN)
+GET {{baseURL}}/livros/completo
+Content-Type: application/json

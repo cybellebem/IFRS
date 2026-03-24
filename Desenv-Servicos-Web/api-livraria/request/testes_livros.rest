@@ -1,0 +1,37 @@
+@baseURL = http://localhost:3000/livros
+### 🔹 Listar todos os livros
+GET {{baseURL}}
+Content-Type: application/json
+###
+### 🔹 Listar livros com editoras (JOIN)
+GET {{baseURL}}/completo
+Content-Type: application/json
+###
+### 🔹 Buscar um livro por ID
+GET {{baseURL}}/1
+Content-Type: application/json
+###
+### 🔹 Adicionar novo livro
+POST {{baseURL}}
+Content-Type: application/json
+{
+"titulo": "O Alquimista",
+"autor": "Paulo Coelho",
+"ano_publicacao": 1988,
+"editora_id": 1
+}
+###
+### 🔹 Atualizar livro
+PUT {{baseURL}}/1
+Content-Type: application/json
+
+{
+"titulo": "O Alquimista (Edição Revisada)",
+"autor": "Paulo Coelho",
+"ano_publicacao": 1988,
+"editora_id": 1
+}
+###
+### 🔹 Deletar livro
+DELETE {{baseURL}}/1
+Content-Type: application/json

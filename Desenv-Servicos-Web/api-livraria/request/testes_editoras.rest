@@ -1,0 +1,30 @@
+@baseURL = http://localhost:3000/editoras
+{
+"titulo": "O Alquimista (Edição Revisada)",
+"autor": "Paulo Coelho",
+"ano_publicacao": 1988,
+"editora_id": 1
+}
+###
+### 🔹 Deletar livro
+DELETE {{baseURL}}/1
+Content-Type: application/json
+### 🔹 Adicionar nova editora
+POST {{baseURL}}
+Content-Type: application/json
+{
+"nome": "Editora Aleph",
+"cidade": "São Paulo"
+}
+###
+### 🔹 Atualizar editora
+PUT {{baseURL}}/1
+Content-Type: application/json
+{
+"nome": "Editora Aleph",
+"cidade": "Rio de Janeiro"
+}
+###
+### 🔹 Deletar editora
+DELETE {{baseURL}}/3
+Content-Type: application/json
