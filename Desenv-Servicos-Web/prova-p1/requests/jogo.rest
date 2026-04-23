@@ -15,9 +15,9 @@ POST {{baseURL}}
 Content-Type: application/json
 
 {
-"nome": "",
-"plataforma": "",
-"ano_lancamento": ""
+"nome": "gfgdf",
+"plataforma": "fgdg",
+"ano_lancamento": "232"
 }
 
 ### PUT /jogos/:id

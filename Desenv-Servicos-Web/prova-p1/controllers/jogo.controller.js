@@ -3,8 +3,8 @@ const jogoModel = require("../models/jogo.model");
 const validarJogo = ({ nome, plataforma, ano_lancamento }) => {
     const anoAtual = new Date().getFullYear();
 
-    if (!nome?.trim() || !plataforma?.trim() || !ano_lancamento) {
-        return "Todos os campos são obrigatórios";
+    if (!nome?.trim() || !plataforma?.trim() || !ano_lancamento?.trim()) {
+        return "Todos os campos devem ser preenchidos";
     }
 
     const ano = Number(ano_lancamento);
