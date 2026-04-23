@@ -13,8 +13,7 @@ exports.inserir = ({ nome, descricao, ingredientes, modo_preparo, tempo_preparo,
     connection.query(sql, [nome, descricao, ingredientes, modo_preparo, tempo_preparo, dificuldade ], callback);
 };
 
-exports.atualizar = (id, { nome, descricao, ingredientes, modo_preparo, tempo_preparo, dificuldade },
-    callback) => {
+exports.atualizar = (id, { nome, descricao, ingredientes, modo_preparo, tempo_preparo, dificuldade }, callback) => {
     const sql = "UPDATE receitas SET nome = ?, descricao = ?, ingredientes = ?, modo_preparo = ?, tempo_preparo = ?, dificuldade = ? WHERE id = ?";
     connection.query(sql, [nome, descricao, ingredientes, modo_preparo, tempo_preparo, dificuldade, id], callback);
 };
