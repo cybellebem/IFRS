@@ -1,0 +1,182 @@
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resumo-carrinho {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+}
+
+.resumo-carrinho h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+.lista-container h2 {
+  margin-bottom: 20px;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produto-nome {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.estoque-baixo {
+  background-color: #fff0c2;
+  color: #8a6500;
+}
+
+.disponível {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.indisponível {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.botao-carrinho {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.botao-carrinho:hover {
+  background-color: #555;
+}
+
+.botao-carrinho:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.formulario-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+}
+
+.formulario-container h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formulario-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formulario-container button:hover {
+  background-color: #555;
+}
+
+.erro {
+  color: #d32f2f;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.filtros-container {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.campo-pesquisa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro-estoque {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtros-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filtros-container input,
+.filtros-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.campo-pesquisa input {
+  width: 100%;
+  box-sizing: border-box;
+}
