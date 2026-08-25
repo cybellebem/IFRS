@@ -1,0 +1,38 @@
+### Listar todos os times
+GET http://localhost:3000/times
+
+
+### Consultar um time pelo ID
+GET http://localhost:3000/times/3
+
+
+### Cadastrar um novo time
+POST http://localhost:3000/times
+Content-Type: application/json
+
+{
+    "nome": "Cyber Eagles",
+    "jogo": "Valorant",
+    "pais": "Brasil",
+    "ano_fundacao": 2024
+}
+
+
+### Atualizar um time
+PUT http://localhost:3000/times/2
+Content-Type: application/json
+
+{
+    "nome": "Storm Wolves Academy",
+    "jogo": "League of Legends",
+    "pais": "Brasil",
+    "ano_fundacao": 2021
+}
+
+
+### Excluir um time
+DELETE http://localhost:3000/times/4
+
+
+### Pesquisar times pelo jogo
+GET http://localhost:3000/times?jogo=Valorant

@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.pesquisa input {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.pesquisa button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+}
+
+.pesquisa button:hover {
+  opacity: 0.8;
+}
+
+.pesquisa .botao-limpar {
+  background-color: #666;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-conteudo {
+  padding: 15px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.mensagem {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.erro {
+  text-align: center;
+  color: #b00020;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .pesquisa {
+    flex-direction: column;
+  }
+
+  .pesquisa input {
+    width: 100%;
+  }
+
+  .pesquisa button {
+    width: 100%;
+  }
+}
