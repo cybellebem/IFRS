@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+
+### Listar produtos
+GET {{baseUrl}}/api/products
+Accept: application/json
+
+### Consultar o produto 1
+GET {{baseUrl}}/api/products/1
+Accept: application/json
+
+### Consultar um produto inexistente
+GET {{baseUrl}}/api/products/999
+Accept: application/json
+
+### Informar um identificador inválido
+GET {{baseUrl}}/api/products/abc
+Accept: application/json
+
+### Cadastrar um produto
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+"name": "Headset USB",
+"price": 159.90,
+"stock": 5
+}
+
+### Testar um preço inválido
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+"name": "Headset USB",
+"price": -1,
+"stock": 5
+}
+
+### Testar um estoque fracionário
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+"name": "Headset USB",
+"price": 159.90,
+"stock": 5.3
+}
+
+### Excluir o produto 2
+DELETE {{baseUrl}}/api/products/2
