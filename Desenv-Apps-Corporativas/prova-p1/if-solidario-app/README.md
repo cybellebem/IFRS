@@ -64,6 +64,7 @@ Aplicação em `http://localhost:5173`.
 
 | Projeto  | Comando            | Descrição                             |
 | -------- | ------------------ | ------------------------------------- |
+| backend  | `npm run start`    | inicializa somente a aplicação        |
 | backend  | `npm run dev`      | inicializa o banco e sobe com nodemon |
 | backend  | `npm run db:reset` | recria o banco com dados fictícios    |
 | backend  | `npm run lint`     | ESLint                                |
