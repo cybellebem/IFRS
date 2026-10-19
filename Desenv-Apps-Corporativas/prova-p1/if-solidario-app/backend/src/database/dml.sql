@@ -1,13 +1,13 @@
 USE voluntariado;
 
 -- =========================
--- USUÁRIOS
+-- USUÁRIOS (senha de ambos: 123456, armazenada com bcrypt)
 -- =========================
 
 INSERT INTO usuarios (email, senha, cargo)
 VALUES
-    ('admin@ifrs.edu.br', '123456', 'admin'),
-    ('usuario@ifrs.edu.br', '123456', 'user');
+    ('admin@ifrs.edu.br', '$2b$10$G7VbHrvnpEmBEV9QP8mfD.k3IatbOxUvwPEQCvdFiyU6HRgpKcpL.', 'admin'),
+    ('usuario@ifrs.edu.br', '$2b$10$G7VbHrvnpEmBEV9QP8mfD.k3IatbOxUvwPEQCvdFiyU6HRgpKcpL.', 'user');
 
 
 -- =========================
@@ -25,28 +25,28 @@ VALUES
 (
     'Campanha de Doação de Sangue',
     'Ação de conscientização e doação de sangue para a comunidade.',
-    '2025-10-10',
+    '2026-11-10',
     'IFRS Campus Bento Gonçalves',
     30
 ),
 (
     'Arrecadação de Alimentos',
     'Campanha para arrecadação de alimentos destinados a famílias em situação de vulnerabilidade.',
-    '2025-10-15',
+    '2026-11-15',
     'IFRS Campus Bento Gonçalves',
     20
 ),
 (
     'Mutirão Ambiental',
     'Ação voluntária de limpeza e preservação de uma área ambiental.',
-    '2025-10-20',
+    '2026-11-20',
     'Parque da cidade',
     15
 ),
 (
     'Campanha do Agasalho',
     'Arrecadação de roupas e agasalhos para pessoas em situação de vulnerabilidade.',
-    '2025-10-25',
+    '2026-11-25',
     'Centro Comunitário',
     25
 );

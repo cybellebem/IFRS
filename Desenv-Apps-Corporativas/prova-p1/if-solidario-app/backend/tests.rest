@@ -1,0 +1,196 @@
+@baseUrl = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGlmcnMuZWR1LmJyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkyNDI0MDcyLCJleHAiOjE3OTI0Mjc2NzJ9.t3PnmbHwfml28liJ_3Nqp6G2z4LeriYSmEEBLaoYGaY
+
+### Status da API
+GET {{baseUrl}}/
+
+############################################
+# AUTENTICAÇÃO
+############################################
+
+### Login como administrador
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@ifrs.edu.br",
+  "password": "123456"
+}
+
+### Login como usuário comum
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "usuario@ifrs.edu.br",
+  "password": "123456"
+}
+
+### Login com senha errada (401)
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@ifrs.edu.br",
+  "password": "errada"
+}
+
+### Dados do usuário logado
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{token}}
+
+############################################
+# DASHBOARD
+############################################
+
+### Dashboard autenticado
+GET {{baseUrl}}/dashboard
+Authorization: Bearer {{token}}
+
+############################################
+# EVENTOS
+############################################
+
+### Listar eventos
+GET {{baseUrl}}/events
+
+### Detalhar evento com voluntários
+GET {{baseUrl}}/events/1
+
+### Evento inexistente
+GET {{baseUrl}}/events/999
+
+### Criar evento
+# @name createEvent
+POST {{baseUrl}}/events
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Mutirão de Plantio",
+  "descricao": "Plantio de mudas nativas no entorno do campus.",
+  "data": "2026-12-05",
+  "local": "IFRS Campus Bento Gonçalves",
+  "maximo_voluntarios": 2
+}
+
+### Criar evento com dados inválidos
+POST {{baseUrl}}/events
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "",
+  "data": "05/12/2026",
+  "maximo_voluntarios": 0
+}
+
+### Atualizar evento
+PUT {{baseUrl}}/events/5
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Mutirão de Plantio (atualizado)",
+  "descricao": "Plantio de mudas nativas e limpeza da área.",
+  "data": "2026-12-06",
+  "local": "IFRS Campus Bento Gonçalves",
+  "maximo_voluntarios": 2
+}
+
+### Inscrever voluntário 1 no novo evento
+POST {{baseUrl}}/events/5/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "voluntario_id": 1 }
+
+### Inscrever voluntário 2 — evento fica lotado
+POST {{baseUrl}}/events/5/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "voluntario_id": 2 }
+
+### Inscrever voluntário 3 — limite atingido
+POST {{baseUrl}}/events/5/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "voluntario_id": 3 }
+
+### Inscrição duplicada
+POST {{baseUrl}}/events/5/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "voluntario_id": 1 }
+
+### Reduzir limite abaixo dos inscritos
+PUT {{baseUrl}}/events/5
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Mutirão de Plantio",
+  "descricao": "Plantio de mudas nativas.",
+  "data": "2026-12-06",
+  "local": "IFRS Campus Bento Gonçalves",
+  "maximo_voluntarios": 1
+}
+
+### Cancelar inscrição do voluntário 2
+DELETE {{baseUrl}}/events/5/volunteers/2
+Authorization: Bearer {{token}}
+
+### Excluir evento
+DELETE {{baseUrl}}/events/5
+Authorization: Bearer {{token}}
+
+############################################
+# VOLUNTÁRIOS
+############################################
+
+### Listar voluntários
+GET {{baseUrl}}/volunteers
+Authorization: Bearer {{token}}
+
+### Buscar voluntário por id
+GET {{baseUrl}}/volunteers/1
+Authorization: Bearer {{token}}
+
+### Criar voluntário
+POST {{baseUrl}}/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Fernanda Lima",
+  "email": "fernanda.lima@email.com",
+  "celular": "54999990007"
+}
+
+### Criar voluntário com e-mail repetido
+POST {{baseUrl}}/volunteers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Outro João",
+  "email": "joao.silva@email.com"
+}
+
+### Atualizar voluntário
+PUT {{baseUrl}}/volunteers/7
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nome": "Fernanda Lima Souza",
+  "email": "fernanda.lima@email.com",
+  "celular": "54988887777"
+}
+
+### Excluir voluntário
+DELETE {{baseUrl}}/volunteers/7
+Authorization: Bearer {{token}}
