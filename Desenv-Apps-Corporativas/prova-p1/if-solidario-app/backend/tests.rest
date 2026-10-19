@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGlmcnMuZWR1LmJyIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkyNDI0MDcyLCJleHAiOjE3OTI0Mjc2NzJ9.t3PnmbHwfml28liJ_3Nqp6G2z4LeriYSmEEBLaoYGaY
+@token = 
 
 ### Status da API
 GET {{baseUrl}}/
